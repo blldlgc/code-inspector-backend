@@ -26,7 +26,7 @@ import com.codeinspector.backend.utils.TestGenerator;
 
 @RestController
 @RequestMapping("/api/code")
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = "https://code-inspector-vercel.vercel.app")
 public class CodeComparisonController {
 
     private final CodeComparisonService codeComparisonService;
