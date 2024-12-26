@@ -8,6 +8,8 @@ RUN mvn clean package -DskipTests
 FROM eclipse-temurin:21-jre-alpine
 WORKDIR /app
 COPY --from=build /app/target/*.jar app.jar
+# Simian jar'ını kopyalıyoruz
+COPY --from=build /app/src/main/resources/libs/simian-4.0.0/simian-4.0.0.jar /app/libs/simian-4.0.0/simian-4.0.0.jar
 
 # Uygulama portunu açıyoruz (varsayılan Spring Boot portu)
 EXPOSE 8080

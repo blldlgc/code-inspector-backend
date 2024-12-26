@@ -13,9 +13,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class SimianAnalyzer {
 
-    private static final String SIMIAN_JAR_PATH = new File(
-            "src/main/java/com/codeinspector/codecomparison/libs/simian-4.0.0/simian-4.0.0.jar"
-    ).getAbsolutePath();
+    private static final String SIMIAN_JAR_PATH = "/app/libs/simian-4.0.0/simian-4.0.0.jar";
 
 
     public SimianResult analyzeSimilarity(String code1, String code2) {
