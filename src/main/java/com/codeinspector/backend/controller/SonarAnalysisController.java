@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/sonar")
-@CrossOrigin(origins = "https://code-inspector-vercel.vercel.app") // React uygulamanızın çalıştığı port
+@CrossOrigin(origins = "https://codeinspector.vercel.app") // React uygulamanızın çalıştığı port
 @RequiredArgsConstructor
 public class SonarAnalysisController {
 

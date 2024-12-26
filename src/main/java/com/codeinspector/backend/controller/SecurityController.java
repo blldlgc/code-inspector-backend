@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/security")
-@CrossOrigin(origins = "https://code-inspector-vercel.vercel.app")
+@CrossOrigin(origins = "https://codeinspector.vercel.app")
 @RequiredArgsConstructor
 public class SecurityController {
 
