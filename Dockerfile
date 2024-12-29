@@ -9,6 +9,10 @@ FROM eclipse-temurin:21-jdk-alpine
 WORKDIR /app
 COPY --from=build /app/target/*.jar app.jar
 
+# Maven repository'den JUnit ve JaCoCo JAR'larını kopyala
+COPY --from=build /root/.m2/repository/junit/ /app/libs/junit/
+COPY --from=build /root/.m2/repository/org/jacoco/ /app/libs/jacoco/
+
 # Simian klasörünü oluştur
 RUN mkdir -p /app/libs/simian-4.0.0
 

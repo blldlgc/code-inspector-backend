@@ -290,7 +290,8 @@ public class InMemoryCoverageAnalyzer {
             options.add("-classpath");
             options.add(System.getProperty("java.class.path") + 
                        File.pathSeparator + tempDir.getAbsolutePath() + 
-                       File.pathSeparator + junitPath);
+                       File.pathSeparator + "/app/libs/junit/junit/4.13.2/junit-4.13.2.jar" +
+                       File.pathSeparator + "/app/libs/jacoco/org.jacoco.core/0.8.11/org.jacoco.core-0.8.11.jar");
             options.add("-Xlint:none");
             options.add("-proc:none");
 
