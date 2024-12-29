@@ -10,13 +10,12 @@ import java.util.List;
 
 import org.springframework.stereotype.Component;
 
+import com.codeinspector.backend.utils.SimianAnalyzer.SimianResult;
+
 @Component
 public class SimianAnalyzer {
 
-    private static final String SIMIAN_JAR_PATH = new File(
-            "src/main/java/com/codeinspector/backend/libs/simian-4.0.0/simian-4.0.0.jar"
-    ).getAbsolutePath();
-
+    private static final String SIMIAN_JAR_PATH = "/app/libs/simian-4.0.0/simian-4.0.0.jar";
 
     public SimianResult analyzeSimilarity(String code1, String code2) {
         File tempFile1 = null;
